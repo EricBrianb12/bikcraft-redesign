@@ -1,0 +1,179 @@
+@media (max-width: 1179px){
+	
+	/* GERAL */
+	 body { background:  #111; }
+
+	.info {
+		width: 100%;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background-color: rgba(0,0,0,.5);
+		border-radius: 5px;
+		padding: 20px;
+	}
+
+	.info h2 { font-size: 35px; }
+
+	.info h2::after {
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	.info p {
+		font-size: 18px;
+		color: #e1e1e1;
+	}
+
+	.info button {
+		width: 200px;
+		height: 50px;
+		cursor: pointer;
+		justify-content: center;
+		font-weight: bold;
+		font-size: 14px;
+		padding-left: 0;
+	}
+
+	.info button::after { content:''; }
+
+	/* HEADER NAV */
+	label {
+		position: relative;
+		display: block;
+		width: 50px;
+		height: 50px;
+		background: red;
+		cursor: pointer;
+		background: #333;
+		border-radius: 3px;
+	}
+
+  label::before,
+  label::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 25px;
+    height: 2.5px;
+    border-radius: 10px;
+    background: #fff;
+    transition: .2s cubic-bezier(0,1.88,.46,1.26);
+  }
+
+   label::before {
+    top: 49%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  input:checked ~ label::before { transform:   translate(-52%, 18%) rotate(44deg); }
+  
+  label::after {
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+ label:hover::after { width: 15px; }
+  
+ input:checked ~ label::after { transform:  translate(-52%, -176%) rotate(132deg);}
+
+ input:checked ~ label:hover::after { width: 25px; }
+  
+
+	.menu {
+		position: absolute;
+		top: -100%;
+		right: 5%;
+		z-index: 999;
+		border-radius: 3px;
+		background: #333;
+		transition: .4s cubic-bezier(0,1.88,.46,1.26);
+	}
+
+	input:checked ~ .menu { top: 12%;	}
+
+	
+	#page-home header nav ul {
+		width: 250px;
+		display: flex;
+		flex-direction: column;
+		border-radius: 3px; 
+		box-shadow: 6px 6px 11px rgb(0 0 0 / 70%);
+	}
+
+	
+
+
+	#page-home header nav ul li { margin-left: 0; }
+
+	#page-home header nav ul li a {
+		display: block;
+		padding: 20px;
+	}
+
+	#page-home header nav ul li a::before       { bottom: -0; }
+	#page-home header nav ul li a:hover::before {  bottom: 0; }
+
+
+	/* PRINCIPAL */
+	.principal .info-principal{
+		max-width: 100%;
+		text-align: center; 
+	}
+
+	.info-principal h1 { font-size: 45px; }
+
+	/* SECTION-BIKES */
+
+		/*codigo*/
+		
+	/* SECTION-BIKES */
+
+	/* SECTION-CONTATOS */
+	.section-contatos { height: 100vh; }
+
+	.section-contatos	.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+
+	.section-contatos,
+	.box-historia,
+	.box-contato,
+	.box-social {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		text-align: center;
+	}
+		
+	.box-contato {
+		display: flex;
+		justify-content: center;
+		flex: 1.5;
+		border-top: 1px solid rgba(255,255,255,.1);
+		border-bottom: 1px solid rgba(255,255,255,.1);
+		border-left: none;
+		border-right: none;
+	}
+
+	/* FOOTER */
+
+	footer .container{
+		display: flex;
+		height: auto;
+		flex-direction: column;
+		padding: 20px 0;
+	}
+
+	footer p {
+		text-align: center;
+		margin-bottom: 20px;
+	}
+
+}

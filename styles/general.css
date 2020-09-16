@@ -1,0 +1,82 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Montserrat';
+}
+
+.container {
+	width: 90%;
+	max-width: 1040px;
+	margin: 0 auto;
+}
+
+body {background-color: #0b0b0b ;}
+
+/*BLOCK INFO*/
+.info {
+	width: 444px;
+	color: #fff;
+	margin-top: 150px;
+}
+
+.info h2 {
+	position: relative;
+	font-size: 46px;
+	font-weight: normal;
+	margin-bottom: 50px;
+}
+
+.info h2::after {
+	content: '';
+	position: absolute;
+	display: block;
+	width: 129px;
+	height: 4px;
+	margin-top: 20px;
+	background-color: #F5BC2A;
+}
+
+.info p {
+	font-family: 'Roboto', sans-serif;
+	font-weight: normal;
+	color: #999;
+	margin-bottom: 35px;
+	font-size: 20px;
+}
+
+.info button {
+	position: relative;
+	width: 256px;
+	height: 57px;
+	background: none;
+	border-style: none;
+	border: 2px solid #fff;
+	color: #fff;
+	outline: none;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding-left: 37px;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.info button::after {
+	content: url('../assets/icons/arrow.svg');
+	display: block;
+	position: absolute;
+	right: 37px;
+	transition: .1s cubic-bezier(0.42, 0.94, 0.02, 0.54);
+}
+
+.info button:hover::after {
+	animation: arrow-animation  .8s  infinite;
+}
+
+@keyframes arrow-animation {
+	0%   { right: 25px;}
+	50%  { right: 20px;}
+	100% { right: 25px;}
+}
